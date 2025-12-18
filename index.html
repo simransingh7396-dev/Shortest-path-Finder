@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Graph Traversal Visualizer (BFS)</h1>
+        <div class="controls">
+            <button onclick="visualizeBFS()">Start Visualization</button>
+            <button onclick="clearBoard()">Clear Board</button>
+        </div>
+        <p class="legend">
+            <span class="box start"></span> Start
+            <span class="box end"></span> Target
+            <span class="box wall"></span> Wall (Click & Drag)
+        </p>
+    </div>
+    
+    <div id="grid-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

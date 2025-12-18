@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #34495e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.controls button:hover { background-color: #27ae60; }
+.controls button:last-child { background-color: #e74c3c; }
+.controls button:last-child:hover { background-color: #c0392b; }
+
+.legend { margin-top: 10px; font-size: 14px; }
+.box { display: inline-block; width: 15px; height: 15px; margin: 0 5px; vertical-align: middle; border: 1px solid #ddd; }
+.box.start { background-color: green; }
+.box.end { background-color: red; }
+.box.wall { background-color: #2c3e50; }
+
+#grid-container {
+    margin-top: 20px;
+    display: grid;
+    border: 1px solid #999;
+}
+
+.node {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #afd8f8;
+    background-color: white;
+}
+
+.node-wall {
+    background-color: #2c3e50;
+    animation: pop 0.2s ease-in-out;
+}
+
+.node-visited {
+    background-color: #5dade2;
+    animation: visitedAnimation 1.5s ease-out;
+}
+
+.node-path {
+    background-color: #f1c40f;
+    animation: pop 0.3s ease-in-out;
+}
+
+.node-start { background-color: green; }
+.node-end { background-color: red; }
+
+@keyframes visitedAnimation {
+    0% { transform: scale(0.3); background-color: #2ecc71; border-radius: 100%; }
+    50% { background-color: #3498db; }
+    100% { transform: scale(1); background-color: #5dade2; }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.6); }
+    100% { transform: scale(1); }
+}
